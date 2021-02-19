@@ -13,9 +13,15 @@ func main() {
 	method := "POST"
 
 	payload := strings.NewReader(`{
-    "title": "title 1",
+    "title": "cool",
     "description": "desc 1",
-    "url": "https://sfdsf.com"
+    "url": "https://sfdsf.com",
+    "author": {
+        "firstname": "rahim",
+        "lastname": "iqbal",
+        "age": 24,
+        "email": "aa@a.com"
+    }
 }`)
 
 	client := &http.Client{}
