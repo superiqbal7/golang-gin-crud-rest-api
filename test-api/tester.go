@@ -9,13 +9,13 @@ import (
 
 func main() {
 
-	url := "http://localhost:8080/videos"
+	url := "http://localhost:8080/api/videos"
 	method := "POST"
 
 	payload := strings.NewReader(`{
-    "title": "cool",
-    "description": "desc 1",
-    "url": "https://sfdsf.com",
+    "title": "cool Golang / Go Gin Framework Crash Course 04 | HTML, Templates and Multi-Route Grouping",
+    "description": "In this video we are going to take a look at HTML, Templates and Multi-Route Grouping using Golang's Gin HTTP Framework.",
+    "url": "https://youtu.be/sDJLQMZzzM4?list=PL3eAkoh7fypr8zrkiygiY1e9osoqjoV9w",
     "author": {
         "firstname": "rahim",
         "lastname": "iqbal",
