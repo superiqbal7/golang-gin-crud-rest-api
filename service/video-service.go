@@ -1,6 +1,6 @@
 package service
 
-import "github.com/pragmaticreviews/golang-gin-poc/entity"
+import "github.com/superiqbal7/golang-gin-crud-rest-api/entity"
 
 type VideoService interface {
 	Save(entity.Video) entity.Video

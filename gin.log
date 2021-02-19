@@ -10,17 +10,13 @@
 	- header.html
 	- index.html
 
-[GIN-debug] GET    /api/videos               --> main.main.func1 (5 handlers)
-[GIN-debug] POST   /api/videos               --> main.main.func2 (5 handlers)
-[GIN-debug] GET    /view/videos              --> github.com/pragmaticreviews/golang-gin-poc/controller.VideoController.ShowAll-fm (5 handlers)
+[GIN-debug] GET    /api/videos               --> github.com/superiqbal7/golang-gin-crud-rest-api/routes.SetVideoRoutes.func1 (5 handlers)
+[GIN-debug] POST   /api/videos               --> github.com/superiqbal7/golang-gin-crud-rest-api/routes.SetVideoRoutes.func2 (5 handlers)
+[GIN-debug] GET    /view/videos              --> github.com/superiqbal7/golang-gin-crud-rest-api/controller.VideoController.ShowAll-fm (3 handlers)
 [GIN-debug] Listening and serving HTTP on :8080
-::1 - [2021-02-19T16:13:28+06:00] POST /api/videos 400 587.262µs 
-::1 - [2021-02-19T16:13:45+06:00] POST /api/videos 200 264.295µs 
-::1 - [2021-02-19T16:13:50+06:00] POST /api/videos 200 318.188µs 
-::1 - [2021-02-19T16:13:50+06:00] POST /api/videos 200 289.092µs 
-::1 - [2021-02-19T16:13:51+06:00] POST /api/videos 200 402.486µs 
-::1 - [2021-02-19T16:14:25+06:00] GET /view/videos 401 25.268µs 
-::1 - [2021-02-19T16:14:34+06:00] GET /view/videos 401 5.851µs 
-::1 - [2021-02-19T16:14:53+06:00] GET /view/videos 200 692.078µs 
-::1 - [2021-02-19T16:14:55+06:00] GET /favicon.ico 401 5.13µs 
-::1 - [2021-02-19T16:14:55+06:00] GET /favicon.ico 404 160.491µs 
+::1 - [2021-02-19T17:10:31+06:00] GET /view/videos 200 365.307µs 
+::1 - [2021-02-19T17:10:38+06:00] GET /view/videos 200 394.261µs 
+::1 - [2021-02-19T17:11:12+06:00] POST /api/videos 200 392.418µs 
+::1 - [2021-02-19T17:11:15+06:00] POST /api/videos 200 327.126µs 
+::1 - [2021-02-19T17:11:15+06:00] POST /api/videos 200 282.101µs 
+::1 - [2021-02-19T17:11:17+06:00] GET /view/videos 200 395.844µs 

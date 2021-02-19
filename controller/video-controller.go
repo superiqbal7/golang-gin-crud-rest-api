@@ -5,9 +5,9 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/go-playground/validator/v10"
-	"github.com/pragmaticreviews/golang-gin-poc/entity"
-	"github.com/pragmaticreviews/golang-gin-poc/service"
-	"github.com/pragmaticreviews/golang-gin-poc/validators"
+	"github.com/superiqbal7/golang-gin-crud-rest-api/entity"
+	"github.com/superiqbal7/golang-gin-crud-rest-api/service"
+	"github.com/superiqbal7/golang-gin-crud-rest-api/validators"
 )
 
 type VideoController interface {
