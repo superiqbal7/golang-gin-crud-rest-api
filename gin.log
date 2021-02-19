@@ -2,7 +2,25 @@
  - using env:	export GIN_MODE=release
  - using code:	gin.SetMode(gin.ReleaseMode)
 
-[GIN-debug] GET    /videos                   --> main.main.func1 (5 handlers)
-[GIN-debug] POST   /videos                   --> main.main.func2 (5 handlers)
+[GIN-debug] GET    /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (1 handlers)
+[GIN-debug] HEAD   /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (1 handlers)
+[GIN-debug] Loaded HTML Templates (4): 
+	- 
+	- footer.html
+	- header.html
+	- index.html
+
+[GIN-debug] GET    /api/videos               --> main.main.func1 (5 handlers)
+[GIN-debug] POST   /api/videos               --> main.main.func2 (5 handlers)
+[GIN-debug] GET    /view/videos              --> github.com/pragmaticreviews/golang-gin-poc/controller.VideoController.ShowAll-fm (5 handlers)
 [GIN-debug] Listening and serving HTTP on :8080
-::1 - [2021-02-19T15:12:59+06:00] POST /videos 200 377.148µs 
+::1 - [2021-02-19T16:13:28+06:00] POST /api/videos 400 587.262µs 
+::1 - [2021-02-19T16:13:45+06:00] POST /api/videos 200 264.295µs 
+::1 - [2021-02-19T16:13:50+06:00] POST /api/videos 200 318.188µs 
+::1 - [2021-02-19T16:13:50+06:00] POST /api/videos 200 289.092µs 
+::1 - [2021-02-19T16:13:51+06:00] POST /api/videos 200 402.486µs 
+::1 - [2021-02-19T16:14:25+06:00] GET /view/videos 401 25.268µs 
+::1 - [2021-02-19T16:14:34+06:00] GET /view/videos 401 5.851µs 
+::1 - [2021-02-19T16:14:53+06:00] GET /view/videos 200 692.078µs 
+::1 - [2021-02-19T16:14:55+06:00] GET /favicon.ico 401 5.13µs 
+::1 - [2021-02-19T16:14:55+06:00] GET /favicon.ico 404 160.491µs 
