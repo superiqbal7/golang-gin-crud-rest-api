@@ -5,20 +5,17 @@
 [GIN-debug] GET    /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (1 handlers)
 [GIN-debug] HEAD   /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (1 handlers)
 [GIN-debug] Loaded HTML Templates (4): 
+	- index.html
 	- 
 	- footer.html
 	- header.html
-	- index.html
 
-[GIN-debug] GET    /api/videos               --> github.com/superiqbal7/golang-gin-crud-rest-api/routes.SetVideoRoutes.func1 (5 handlers)
-[GIN-debug] POST   /api/videos               --> github.com/superiqbal7/golang-gin-crud-rest-api/routes.SetVideoRoutes.func2 (5 handlers)
+[GIN-debug] POST   /auth/login               --> github.com/superiqbal7/golang-gin-crud-rest-api/routes.AuthRoutes.func1 (3 handlers)
+[GIN-debug] GET    /api/videos               --> github.com/superiqbal7/golang-gin-crud-rest-api/routes.SetVideoRoutes.func1 (4 handlers)
+[GIN-debug] POST   /api/videos               --> github.com/superiqbal7/golang-gin-crud-rest-api/routes.SetVideoRoutes.func2 (4 handlers)
 [GIN-debug] GET    /view/videos              --> github.com/superiqbal7/golang-gin-crud-rest-api/controller.VideoController.ShowAll-fm (3 handlers)
-[GIN-debug] Listening and serving HTTP on :8080
-::1 - [2021-02-19T17:10:31+06:00] GET /view/videos 200 365.307µs 
-::1 - [2021-02-19T17:10:38+06:00] GET /view/videos 200 394.261µs 
-::1 - [2021-02-19T17:11:12+06:00] POST /api/videos 200 392.418µs 
-::1 - [2021-02-19T17:11:15+06:00] POST /api/videos 200 327.126µs 
-::1 - [2021-02-19T17:11:15+06:00] POST /api/videos 200 282.101µs 
-::1 - [2021-02-19T17:11:17+06:00] GET /view/videos 200 395.844µs 
-127.0.0.1 - [2021-02-19T17:17:42+06:00] POST /videos 404 591ns 
-127.0.0.1 - [2021-02-19T17:18:15+06:00] POST /api/videos 200 365.967µs 
+[GIN-debug] Listening and serving HTTP on :5000
+[GIN] 2021/02/21 - 00:55:22 | 401 |     167.854µs |             ::1 | POST     "/auth/login"
+[GIN] 2021/02/21 - 00:56:04 | 200 |     150.772µs |             ::1 | POST     "/auth/login?username=aaa&password=aaa"
+[GIN] 2021/02/21 - 00:56:23 | 200 |      320.92µs |             ::1 | POST     "/api/videos"
+[GIN] 2021/02/21 - 00:56:30 | 200 |     133.099µs |             ::1 | GET      "/api/videos"

@@ -5,7 +5,6 @@ import (
 	"os"
 
 	"github.com/gin-gonic/gin"
-	"github.com/superiqbal7/golang-gin-crud-rest-api/middlewares"
 	"github.com/superiqbal7/golang-gin-crud-rest-api/routes"
 )
 
@@ -22,7 +21,10 @@ func main() {
 	server.Static("/css", "./templates/css")
 	server.LoadHTMLGlob("templates/*.html")
 
-	server.Use(gin.Recovery(), middlewares.Logger())
+	server.Use(gin.Recovery(), gin.Logger())
+
+	authRoutes := server.Group("/auth")
+	routes.InitAuthRoutes(authRoutes)
 
 	apiRoutes := server.Group("/api")
 	routes.InitRoutes(apiRoutes)
@@ -30,5 +32,11 @@ func main() {
 	viewRoutes := server.Group("/view")
 	routes.InitViewoutes(viewRoutes)
 
-	server.Run(":8080")
+	port := os.Getenv("PORT")
+
+	if port == "" {
+		port = "5000"
+	}
+
+	server.Run(":" + port)
 }
