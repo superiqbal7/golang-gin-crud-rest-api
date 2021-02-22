@@ -25,4 +25,25 @@ func SetVideoRoutes(router *gin.RouterGroup) {
 			})
 		}
 	})
+
+	router.PUT("/videos/:id", func(ctx *gin.Context) {
+		err := videoController.Update(ctx)
+		if err != nil {
+			ctx.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		} else {
+			ctx.JSON(http.StatusOK, gin.H{"message": "Success!"})
+		}
+
+	})
+
+	router.DELETE("/videos/:id", func(ctx *gin.Context) {
+		err := videoController.Delete(ctx)
+		if err != nil {
+			ctx.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		} else {
+			ctx.JSON(http.StatusOK, gin.H{"message": "Success!"})
+		}
+
+	})
+
 }

@@ -5,6 +5,7 @@ import (
 	"os"
 
 	"github.com/gin-gonic/gin"
+	"github.com/superiqbal7/golang-gin-crud-rest-api/repository"
 	"github.com/superiqbal7/golang-gin-crud-rest-api/routes"
 )
 
@@ -13,7 +14,10 @@ func setupLogOutput() {
 	gin.DefaultWriter = io.MultiWriter(f, os.Stdout)
 }
 
+var videoRepository repository.VideoRepository = repository.NewVideoRepository()
+
 func main() {
+	defer videoRepository.CloseDB()
 	setupLogOutput()
 
 	server := gin.New()
